@@ -1,0 +1,13 @@
+alias l="ls -la"       # List in long format, include dotfiles
+alias ld="ls -ld */"   # List in long format, only directories
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+# Recursively remove .DS_Store files
+alias cleanupds="find . -type f -name '*.DS_Store' -ls -delete"
+
+alias gotoWorkspace=cd ~/dev/repos/dev/
+alias mvnCleanInstalWoTests=mvn clean install -DskipTests -Pdependencies
+alias initializeBranch=git pull && ant initialize_branch_properties && ant mirror_client && ant migrate
+alias uiUpdate= cd asset-packaging && gulp clean && gulp package.all && cd ..
+alias status=git status
